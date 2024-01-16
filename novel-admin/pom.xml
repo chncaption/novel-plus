@@ -106,7 +106,7 @@
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-spring</artifactId>
-            <version>1.7.0</version>
+            <version>1.13.0</version>
         </dependency>
         <!-- shiro ehcache -->
         <dependency>
@@ -272,8 +272,7 @@
                                         <include name="*.*"/>
                                     </fileset>
                                 </copy>
-                                <copy file="${project.build.directory}/${project.artifactId}-${project.version}.jar"
-                                      tofile="${project.build.directory}/build/${project.artifactId}.jar"/>
+                                <copy file="${project.build.directory}/${project.artifactId}-${project.version}.jar" tofile="${project.build.directory}/build/${project.artifactId}.jar"/>
 
                                 <fixcrlf srcdir="${basedir}/src/main/build/scripts" eol="unix"/>
                                 <copy todir="${project.build.directory}/build/bin">
@@ -283,8 +282,8 @@
                                         <include name="*.bat"/>
                                     </fileset>
                                 </copy>
-                                <zip destfile='${project.build.directory}/build/${project.artifactId}.zip'>
-                                    <zipfileset filemode="755" dir='${project.build.directory}/build/'/>
+                                <zip destfile="${project.build.directory}/build/${project.artifactId}.zip">
+                                    <zipfileset filemode="755" dir="${project.build.directory}/build/"/>
                                 </zip>
                             </tasks>
                         </configuration>
