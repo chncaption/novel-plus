@@ -62,7 +62,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.11</version>
+            <version>8.0.31</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis</groupId>
@@ -272,8 +272,7 @@
                                         <include name="*.*"/>
                                     </fileset>
                                 </copy>
-                                <copy file="${project.build.directory}/${project.artifactId}-${project.version}.jar"
-                                      tofile="${project.build.directory}/build/${project.artifactId}.jar"/>
+                                <copy file="${project.build.directory}/${project.artifactId}-${project.version}.jar" tofile="${project.build.directory}/build/${project.artifactId}.jar"/>
 
                                 <fixcrlf srcdir="${basedir}/src/main/build/scripts" eol="unix"/>
                                 <copy todir="${project.build.directory}/build/bin">
@@ -283,8 +282,8 @@
                                         <include name="*.bat"/>
                                     </fileset>
                                 </copy>
-                                <zip destfile='${project.build.directory}/build/${project.artifactId}.zip'>
-                                    <zipfileset filemode="755" dir='${project.build.directory}/build/'/>
+                                <zip destfile="${project.build.directory}/build/${project.artifactId}.zip">
+                                    <zipfileset filemode="755" dir="${project.build.directory}/build/"/>
                                 </zip>
                             </tasks>
                         </configuration>
